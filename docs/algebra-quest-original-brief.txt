@@ -1,0 +1,76 @@
+ROLE
+You are a professional educational game designer and senior front-end developer. Build "ALGEBRA QUEST: THE NUMBER REALM", a complete browser game that teaches Year 7 (age 11-12) mathematics through 10 stages, each a different well-loved game style. Students must MASTER each topic before the next stage unlocks.
+
+STORY
+Dr. Chaos has scrambled the Number Realm. Ten Guardians each hold a Math Crystal. The student (an Algebra Explorer with a customisable avatar) wins each Crystal by mastering that world. Short, funny, 2-line story intros per stage. Tone: playful, encouraging, never babyish. No game-over shaming.
+
+CORE LOOP (identical in every stage)
+1. LEARN (20-30s): animated mini-lesson with one worked example. Skippable after the first time.
+2. PLAY: the stage's own game style where each action is a maths decision.
+3. MASTERY METER (0-100): correct +10, streak bonus +2 per streak step (max +10), wrong -10 (not below 0). Stage clears only when meter reaches 100 AND the player has answered at least 8 of the last 10 questions correctly. If not, keep playing new questions (never the same numbers twice).
+4. ADAPTIVE DIFFICULTY: each stage has 4 tiers (easy to hard). Move up after 3 correct in a row, down after 2 wrong in a row. Tag every question with a sub-skill (e.g. "neg-subtract"). If a sub-skill is missed twice, serve that sub-skill again within the next 3 questions with new numbers.
+5. WRONG ANSWER: instant feedback with a short worked explanation of the correct method, then a similar question soon after.
+6. HEARTS: 3 hearts per run. A wrong answer costs one heart. At 0 hearts the player enters the TRAINING ROOM (re-teach with a worked example plus 2 guided questions), then continues with meter at half. Never a hard fail.
+7. HINT LADDER (costs coins): hint 1 reminds the rule, hint 2 shows the first step, hint 3 shows a full worked example.
+8. SPACED REVIEW: from Stage 3 on, 20% of questions are quick-fire reviews of earlier topics.
+9. BOSS RUSH after Stages 3, 6 and 9: 10 mixed questions from all earlier topics for a bonus chest. Final Grand Finale after Stage 10.
+10. REWARDS: XP, coins, 1-3 stars per stage (by accuracy), badges, a streak flame, avatar skins/hats/car-style trails bought with coins. Passing a stage gives a Crystal animation.
+
+THE 10 STAGES (in this order)
+
+STAGE 1 - NEGATIVE INTEGERS - "DEEP DIVE MINE" (Minecraft-style digging)
+Vertical mine shaft = number line (above sea level positive, below negative). The mine cart/elevator starts at a level and moves; the player taps or types the new depth to collect gems.
+Tiers: (1) order/compare negatives; (2) add/subtract with positive and negative results, e.g. -3 + 5, 2 - 7; (3) subtracting negatives, 4 - (-2), -5 - (-3); (4) multiply/divide negatives, plus temperature and depth word problems.
+
+STAGE 2 - BIDMAS - "SUBWAY DASH" (endless runner like Subway Surfers)
+The player runs along 3 lanes. Gates show candidate parts of an expression, e.g. 3 + 4 x 2^2 - 6 / 3. Run into the lane holding the part that must be done FIRST; the expression rewrites live as it simplifies. Finish by typing the final value.
+Tiers: (1) + - x / only; (2) with brackets; (3) with indices; (4) all of these with negatives and nested brackets.
+
+STAGE 3 - SUBSTITUTION - "MONSTER ARENA" (Pokemon-style battles)
+Each monster has an attack formula, e.g. Damage = 3a + 2b. Given a = 4, b = -1, the player computes the damage; a correct answer powers the attack, and bigger answers beat tougher monsters.
+Tiers: (1) one variable, 2x + 3; (2) two variables; (3) powers and negatives, x^2 + 1 with x = -3; (4) real formulas such as A = lw, P = 2l + 2w, v = u + at.
+
+STAGE 4 - LAW OF INDICES - "POWER 2048" (tile-merge puzzle like 2048)
+Tiles show powers like a^3 and a^2. Before merging, the player picks the rule (add / subtract / multiply powers) and then the merge happens. Each correct rule makes tiles merge and combo.
+Tiers: (1) multiply, a^3 x a^2 = a^5; (2) divide, a^7 / a^4; (3) power of a power (a^2)^3 and the zero index a^0 = 1; (4) mixed with numbers and coefficients, 3x^2 x 2x^3 = 6x^5.
+
+STAGE 5 - EQUATIONS - "BALANCE DUNGEON" (Zelda-style puzzle rooms)
+Doors open when a visual balance scale is level. The player drags "do the same to both sides" operation cards onto the scale. The scale animates after each move, and the final step is typing x.
+Tiers: (1) one-step x + 5 = 12; (2) two-step 3x + 5 = 20; (3) unknown on both sides 5x - 3 = 2x + 9, and brackets 2(x + 3) = 14; (4) negative or fractional-free answers and word problems.
+
+STAGE 6 - MULTIPLE EQUATIONS - "MYSTERY MANSION" (detective / Among-Us-style deduction)
+A vault needs a two-digit code or hidden values. Two clue cards (equations) are shown, such as x + y = 10 and x - y = 2. The player combines the clues and cracks the vault by finding both values, then checks them in BOTH equations.
+Tiers: (1) add/subtract to eliminate; (2) substitution, y = 2x and x + y = 12; (3) form equations from word clues (ages, prices); (4) mixed, with negative solutions.
+
+STAGE 7 - EXPANDING BRACKETS - "BRACKET NINJA" (Fruit Ninja-style slicing)
+A bracket "fruit" such as 3(x + 8) appears. Term fruits fly across the screen (3x, 24, 8x, 11x...). Slice the correct terms to build the expansion in order; slicing a wrong term loses a heart. A typed-answer mode is available for each question.
+Tiers: (1) 2(x + 5), 4(x + 6); (2) 2x(x + 6), 3y(y + 4); (3) with negatives, 5x(3x - 2), 4x(3x - 5); (4) bigger terms 3y(2y^2 + 5y), 5y(2y^2 - 3y).
+
+STAGE 8 - FACTORISING - "BLOCK BUILDER" (Tetris-style packing)
+The expression falls as blocks, e.g. 6x^2 + 18x. The player finds the HCF, then fits the blocks into the matching bracket frame. After each answer, a "check your lock" animation expands the answer back to prove it (links to Stage 7).
+Tiers: (1) 2x + 10 = 2(x + 5), 4y + 20, 9m + 45; (2) 4x^2 + 16x = 4x(x + 4); (3) 6x^2 + 18x = 6x(x + 3), 10a^2 + 20a; (4) with subtraction, 6x^2 - 24x = 6x(x - 4), 8y^2 - 16y.
+
+STAGE 9 - AREA OF 2D SHAPES - "CITY BUILDER" (Roblox tycoon / SimCity style)
+The player builds a town. Each building plot is a shape (rectangle, triangle, parallelogram, trapezium, compound shape). Working out its area unlocks the plot and earns coins to spend on the city. Budget questions add context: "turf costs 5 coins per m^2".
+Tiers: (1) rectangle and square; (2) triangle and parallelogram; (3) trapezium and compound shapes; (4) algebraic areas, e.g. a rectangle 3 by (x + 4) = 3x + 12 (links to expanding).
+
+STAGE 10 - SIMPLIFYING ALGEBRAIC FRACTIONS - "FINAL BOSS" (Street Fighter / Smash-style boss fight)
+Dr. Chaos shows a fraction such as (6x + 12) / 3. The player attacks by "Factorise, then Cancel". Each correct step damages the boss; a wrong step lets Dr. Chaos hit back. The boss has 3 phases that get harder.
+Tiers: (1) numeric cancelling; (2) (2x + 10) / 2 and (6x^2 + 18x) / (6x); (3) both top and bottom factorised, (4x + 8) / (2x + 4); (4) mixed with indices, x^3 / x, and earlier skills.
+
+MATHS ENGINE (important)
+- Generate questions from templates with random parameters in the ranges above. Never repeat identical questions within a session.
+- Accept typed algebra flexibly: ignore spaces; accept x, *, x for multiplication; ^ and superscripts; implicit multiplication such as 6x(x+3); terms in any order. Mark answers by expanding both sides into polynomial form and comparing coefficients. For factorising, require the FULL highest common factor.
+- Use British spelling (factorising, expanding).
+- Every question has a stored worked solution for the feedback and hint system.
+
+UI AND FEEL
+- One self-contained HTML file, plain JavaScript and SVG/canvas, no external images. Fast, 60fps, works on phone and laptop (touch, mouse, keyboard).
+- Bright arcade look with a different colour theme per world; a world map screen showing the 10 stages (locked/unlocked/starred). Support light and dark mode.
+- Sound effects and music generated with Web Audio, with a mute button. Satisfying effects (confetti, screen shake on hits) that never hide the maths.
+- Large readable maths text. A calm "no pressure" mode that removes timers and speed bonuses.
+- Progress, coins, stars, avatar and per-skill mastery saved in localStorage (inside try/catch with an in-memory fallback). Progress screen showing mastery percentage for each topic and the sub-skills that need practice.
+- A reset-progress option and a "replay any unlocked stage" option.
+
+DELIVERABLE
+Build the complete working game now. Start with a working playable version of all 10 stages, then polish.
